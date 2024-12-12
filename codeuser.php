@@ -23,6 +23,8 @@ if (isset($_POST['payment_btn'])) {
   echo $query;
   if (mysqli_query($con, $query)) {
 
+    // this a addmin  and user id panal and it is more than work and type of  query'admin_id  and user_id'
+    // $query = "ALTER movetocart SET status = 0 WHERE admin_id = '$admin_id'";
     $query = "UPDATE addtocart SET status = 1 WHERE user_id = '$user_id'";
     $result = mysqli_query($con, $query);
     $_SESSION['status'] = "Payment Successfully";
